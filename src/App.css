@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#videoBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  padding: 1em;
+  font-size: 1em;
+  margin-top: 1em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#catContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+#catImage {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+}
+
+#catMessage {
+  text-align: center;
+  margin-top: 1em;
+  color: white;
+  padding: 0 1em;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
